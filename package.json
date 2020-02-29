@@ -1,0 +1,27 @@
+{
+  "name": "qq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install & npm run init:client & npm run init:server",
+    "init:client": "cd client & npm install",
+    "init:server": "cd server & npm install",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client & npm run dev",
+    "dev:server": "cd server & npm run dev",
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\"",
+    "build:client": "cd client & npm run build & npm run start",
+    "build:server": "cd server & npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}
